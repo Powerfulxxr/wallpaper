@@ -42,6 +42,13 @@
             <artifactId>jna-platform</artifactId>
             <version>5.11.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.doraig/jcef -->
+        <dependency>
+            <groupId>com.github.doraig</groupId>
+            <artifactId>jcef</artifactId>
+            <version>78.1-win64</version>
+        </dependency>
+
     </dependencies>
 
     <build>
