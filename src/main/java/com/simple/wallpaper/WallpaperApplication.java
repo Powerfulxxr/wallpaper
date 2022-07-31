@@ -12,7 +12,8 @@ public class WallpaperApplication {
 //        SpringApplication.run(WallpaperApplication.class, args);
         SpringApplicationBuilder builder = new SpringApplicationBuilder(WallpaperApplication.class);
         //设置headless=false，设置web为none
-        builder.headless(false).web(WebApplicationType.NONE).run(args);
+        builder.headless(false).run(args);
+//        builder.headless(false).web(WebApplicationType.NONE).run(args);
     }
 
 }

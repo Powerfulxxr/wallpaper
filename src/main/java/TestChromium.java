@@ -296,7 +296,7 @@ public class TestChromium extends JFrame implements WindowListener {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    TestChromium frame = new TestChromium("https://www.taobao.com/", false, false);
+                    TestChromium frame = new TestChromium("http://localhost:12345/", false, false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
