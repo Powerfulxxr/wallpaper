@@ -1,6 +1,7 @@
 package com.simple.Tool;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.simple.service.Wallpaper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -8,14 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class AppRunner implements ApplicationRunner {
 
-    @Value("${wallpaper.img.dir}")
-    private String imgDir;
-
-    @Value("${wallpaper.img.switch.seconds}")
-    private int switchSeconds;
-
+    @Autowired
+    private Wallpaper wallpaper;
     @Override
     public void run(ApplicationArguments args) {
-        FrameUtils.callImageFrame(imgDir,switchSeconds);
+        wallpaper.load();
     }
+
 }
