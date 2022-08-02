@@ -114,9 +114,9 @@ public class TestChromium extends JFrame implements WindowListener {
         setAutoRequestFocus(false);
         setFocusable(false);
         setFocusableWindowState(false);
-        setUndecorated(true);// 无边框
+        /*setUndecorated(true);// 无边框
         setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);*/
         setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
 
         jButton1.setText("Home");
@@ -296,7 +296,7 @@ public class TestChromium extends JFrame implements WindowListener {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    TestChromium frame = new TestChromium("http://localhost:12345/", false, false);
+                    TestChromium frame = new TestChromium("http://localhost:12345/video", false, false);
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();

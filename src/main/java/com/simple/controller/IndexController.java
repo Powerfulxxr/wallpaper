@@ -1,14 +1,20 @@
 package com.simple.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 public class IndexController {
 
     @RequestMapping
-    public String index(){
+    @ResponseBody
+    public String index() {
         return "Hello Wallpaper";
     }
 
+    @RequestMapping("video")
+    public String video() {
+        return "video";
+    }
 }
